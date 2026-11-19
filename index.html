@@ -594,7 +594,7 @@ function openChartHelp(trigger,kind){
  document.getElementById('chartHelpTitle').textContent=kind==='chart'?'累計受給額グラフについて':'逆転年齢について';
  document.getElementById('chartHelpContent').innerHTML=kind==='chart'
   ? '<p>死亡予定年齢に関係なく、60～100歳まで表示します。死亡予定年齢より右側は「もし長生きしたら」の仮定です。</p><p>※逆転年齢の計算には、入力された死亡予定年齢を考慮していません。</p><p>※税金・社会保険料を差し引く前の金額です。手取り額での逆転年齢は異なる場合があります。</p>'
-  : '<p>この年齢を境に、選んだ受給方法と65歳受給の累計額の大小関係が逆転します。</p><p>両方とも65歳受給の場合、2本の線は重なります。60～100歳の範囲で逆転がない場合は「逆転なし」と表示します。</p>';
+  : '<p>この年齢を境に、選んだ受給方法と65歳受給の累計額の大小関係が逆転します。</p><p>両方とも65歳受給の場合、2本の線は重なります。</p>';
  chartHelpOverlay.classList.add('open');trigger.setAttribute('aria-expanded','true');chartHelpBox.focus({preventScroll:true});
 }
 document.getElementById('chartHelpBtn').addEventListener('click',e=>openChartHelp(e.currentTarget,'chart'));
